@@ -3,6 +3,8 @@
   margin: 0;
   box-sizing: border-box;
   text-decoration: none;
+  font-family: 'Inter', sans-serif;
+
 }
 
 nav {
@@ -278,8 +280,6 @@ nav {
 
 /*  */
 
-/* LEMBRAR DE ARRUMAR O ALINHAMENTO ENTRE AS INFO */
-
 /* SECTION DE INFORMACOES */
 .infoArea {
   display: flex;
@@ -287,15 +287,14 @@ nav {
 }
 
 .imgInfo {
-  margin-left: 20px;
+  margin: 0 0 -6px 20px;
   height: 55px;
   width: 55px;
 }
 
 .textInfo {
-  border-left: 2px red solid;
+  border-left: 2px #cc0202 solid; 
   padding-left: 5px;
-  color: darkslategray;
 }
 
 .textInfo p {
@@ -319,7 +318,7 @@ nav {
   border-radius: 50px;
 }
 
-/* REDES SOCIAIS E IMAGENS DAS DATAS COMEMORATIVAS*/
+/* SECTION REDES SOCIAIS E IMAGENS DAS DATAS COMEMORATIVAS*/
 
 .socialArea {
   margin-top: 55px;
@@ -330,7 +329,7 @@ nav {
 }
 
 .socials h3 {
-  border-left: 2px red solid;
+  border-left: 2px #cc0202 solid;
   padding-left: 5px;
   margin-right: 7px;
 }
@@ -432,7 +431,7 @@ div iframe:nth-of-type(2) {
   font-size: 14px;
   background-color: #d9d9d9;
   height: 30px;
-  width: 235px;
+  width: 280px;
   text-align: center;
   line-height: 30px;
   margin-top: 30px;
@@ -474,6 +473,11 @@ footer {
   gap: 0.5rem;
 }
 
+.footer-logo img {
+  height: 122px;
+  width: 171px;
+}
+
 .footer-logo .vertical-line {
   height: 130px;
 }
@@ -485,8 +489,8 @@ footer {
 }
 
 .footerInfo {
+  float: right;
   display: flex;
-  justify-content: center;
   align-items: center;
 }
 
@@ -497,6 +501,55 @@ footer {
 
 .footerInfo p {
   margin: 0 10px 0 10px;
-  color: darkslategray;
   font-size: 1.05rem;
+}
+
+.footerBottom p:nth-of-type(2) {
+  display: none;
+}
+
+@media (max-width:1150px) {
+  .footerInfo {
+    float: none;
+  }
+  .footerInfo img {
+    margin-top: 5px;
+    height: 36px;
+    width: 36px;
+  }
+
+  .footerInfo p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .footerTop {
+    flex-direction: column;
+    height: 320px;
+  }
+
+  .footer-logo img{
+    height: 112px;
+    width: 161px;
+  }
+
+  .footer-logo p{
+    font-size: 1.09rem;
+  }
+
+  .footerInfo {
+    justify-content: normal;
+  }
+
+  .footerBottom p:nth-of-type(1) {
+    display: none;
+  }
+  .footerBottom p:nth-of-type(2) {
+    display: block;
+    font-size: 12px;
+  }
+  .footerBottom p:nth-of-type(3) {
+    font-size: 12px;
+  }
 }
