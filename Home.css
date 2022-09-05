@@ -21,7 +21,7 @@ nav {
 /* -------------------- HEADER -------------------- */
 #header-logo {
   width: 100%;
-  margin: 2rem 0 1.5rem 0;
+  margin: 0.5rem 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,18 +29,18 @@ nav {
 }
 
 #header-logo img {
-  height: 150px;
+  height: 100px;
 }
 
 #header-logo p {
   color: darkslategray;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: bold;
 }
 
 .vertical-line {
   border: 1px solid #cc0202;
-  height: 150px;
+  height: 100px;
 }
 
 .nav-links {
@@ -56,9 +56,6 @@ nav {
   height: 100%;
   list-style: none;
   white-space: nowrap;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .nav-links a {
@@ -159,13 +156,13 @@ nav {
 
 .dropdown.is-active {
   position: absolute;
-  top: 15.8rem;
-  left: 0;
-  z-index: 0;
+  top: 10.2rem;
+  right: 0;
+  z-index: 3;
   width: fit-content;
   background-color: #cc0202;
   padding: 0 0.5rem 0.5rem 0.5rem;
-  border-radius: 0 0 0.5rem 0;
+  border-radius: 0 0 0 0.5rem;
   box-shadow: 1px 2px 2px black;
   display: flex;
   flex-direction: column;
@@ -178,8 +175,7 @@ nav {
   width: 100%;
   padding: 0.5rem;
   border-radius: 0.5rem;
-  border-left: 1px solid rgb(100, 10, 10);
-  border-right: 1px solid rgb(100, 10, 10);
+  border-bottom: 1px solid #fff;
   color: white;
   text-align: center;
 }
@@ -202,16 +198,28 @@ nav {
 }
 
 @media screen and (max-width: 780px) {
+  #header-logo {
+    position: absolute;
+    top: 3rem;
+  }
+
+  nav {
+    position: relative;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    margin-bottom: 7.2rem;
+  }
+
   .nav-links {
     display: none;
   }
 
-  nav {
-    justify-content: space-around;
-  }
-
   .search-box {
     margin: 0;
+  }
+
+  .dropdown.is-active {
+    top: 3rem;
   }
 }
 
@@ -272,10 +280,14 @@ nav {
   text-shadow: 0 0 2px rgba(0, 0, 0, 1);
   transform: translateY(-50%);
 }
+.carousel-button img {
+  width: 1.5rem;
+  filter: opacity(50%);
+}
 
-.carousel-button:hover,
-.carousel-button:focus {
-  color: white;
+.carousel-button:hover img,
+.carousel-button:focus img {
+  filter: invert(100%) opacity(100%);
 }
 
 .carousel-button.prev {
@@ -295,17 +307,20 @@ nav {
 @media screen and (max-width: 780px) {
   .carousel {
     height: 20vh;
+    width: 100%;
   }
 }
 
 /* -------------------- LATEST NEWS -------------------- */
 .latest-news {
   width: 100%;
-  margin: 2rem 0 4rem 0;
+  margin: 4rem 0 6rem 0;
 }
 
 .latest-news > h1 {
+  font-weight: bold;
   margin-left: 4.5%;
+  margin-bottom: 1rem;
   border-left: 2px #cc0202 solid;
   padding-left: 0.5rem;
 }
@@ -321,7 +336,7 @@ nav {
 .news-carousel {
   position: relative;
   width: 60%;
-  height: 60vh;
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -366,17 +381,18 @@ nav {
 
 .other-news {
   width: 50%;
-  height: 100%;
+  height: 50vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 1rem;
 }
 
 .other-news img {
-  width: 30vh;
-  height: 30vh;
+  width: 20vh;
+  height: 20vh;
+  margin-left: 1rem;
   border-radius: 2rem;
   object-fit: cover;
 }
@@ -388,6 +404,7 @@ nav {
 
 .other-news-1 a,
 .other-news-2 a {
+  height: 25vh;
   color: #000;
   border-radius: 2rem;
   display: flex;
@@ -399,17 +416,17 @@ nav {
 .other-news-1 a:hover,
 .other-news-2 a:hover {
   color: #fff;
-  background-color: #cc0202;
+  background-color: #dd3a3a;
 }
 
 .more-news-btn {
   position: absolute;
-  bottom: -2rem;
+  bottom: -2.2rem;
   border: none;
   border-radius: 1rem;
   background-color: #cc0202;
   color: #fff;
-  padding: 0.2rem 0.4rem;
+  padding: 0.4rem 0.8rem;
   font-weight: bold;
   font-size: 0.9rem;
 }
@@ -444,14 +461,42 @@ nav {
   }
 }
 
-@media screen and (max-width: 720px) {
+@media screen and (max-width: 780px) {
+  .latest-news {
+    margin-bottom: 1rem;
+  }
+
+  .latest-news > h1 {
+    font-size: 1.2rem;
+  }
+
+  .news-carousel {
+    height: 40vh;
+    margin-bottom: 0.5rem;
+  }
+
   .other-news {
     font-size: 1rem;
     flex-direction: column;
+    justify-content: center;
   }
 
   .other-news p {
     max-width: 100%;
+  }
+
+  .other-news h2 {
+    font-size: 1.2rem;
+  }
+
+  .other-news img {
+    width: 15vh;
+    height: 15vh;
+  }
+
+  .other-news-1 a,
+  .other-news-2 a {
+    height: 20vh;
   }
 }
 
