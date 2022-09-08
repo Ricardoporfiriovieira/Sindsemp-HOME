@@ -527,7 +527,7 @@ nav {
 }
 
 .imgInfo {
-  margin: 0 0 -6px 20px;
+  margin: 0 0 4px 20px;
   height: 65px;
   width: 65px;
 }
@@ -836,8 +836,12 @@ footer {
     flex-direction: column;
   }
 
-  .infoArea div {
-    margin-top: 15px;
+  .infoArea > div:nth-of-type(2), .infoArea > div:nth-of-type(3) {
+    margin-top: 19px;
+  }
+
+  .imgInfo {
+    margin-bottom: 0px;
   }
 
   .textInfo p {
