@@ -841,6 +841,7 @@ footer {
 
   .infoArea {
     flex-direction: column;
+    width: 89.6%;
   }
 
   .infoArea > div:nth-of-type(2),
@@ -864,6 +865,10 @@ footer {
   .socials {
     margin-top: 30px;
     flex-direction: column;
+  }
+
+  .socials h1 {
+    font-size: 19.2px;
   }
 
   .socials br, .contact br{
@@ -897,6 +902,7 @@ footer {
   .areaContactVideo {
     flex-direction: column;
     margin-bottom: 17px;
+    width: 89.6%;
   }
 
   .contact {
