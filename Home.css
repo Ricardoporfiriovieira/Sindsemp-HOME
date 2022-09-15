@@ -549,7 +549,7 @@ nav {
 
 .infoArea {
   margin: 0 auto;
-  width: 91.3%;
+  width: 81.3%;
   display: flex;
   justify-content: space-between;
 }
@@ -589,79 +589,15 @@ nav {
   background-color: rgb(100, 10, 10);
 }
 
-/* SECTION REDES SOCIAIS E IMAGENS DAS DATAS COMEMORATIVAS*/
 
-.socialArea {
-  margin: 45px auto;
-  width: 91.3%;
-}
-
-.socials {
-  display: flex;
-}
-
-.socials div {
-  display: flex;
-}
-
-.socials h1 {
-  border-left: 2px #cc0202 solid;
-  padding-left: 5px;
-  margin-right: 7px;
-}
-
-/* Esta em flex porque as imagens estao em tamanho diferente */
-.socials a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 14px;
-  height: 50px;
-  width: 50px;
-}
-
-.socials a:nth-of-type(1) img {
-  height: 50px;
-  width: 50px;
-}
-.socials a:nth-of-type(2) img {
-  height: 40px;
-  width: 40px;
-}
-.socials a:nth-of-type(3) img {
-  height: 43px;
-  width: 43px;
-}
-
-.imgDiasComemorativos {
-  display: flex;
-  justify-content: space-between;
-}
-
-.imgDiasComemorativos a {
-  width: 22%;
-  height: 22%;
-}
-
-.imgDiasComemorativos img {
-  height: 385px;
-  width: 385px;
-  height: 100%;
-  width: 100%;
-  margin-top: 15px;
-}
 
 /* SECTION ENTRE EM CONTATO */
 
 .areaContactVideo {
-  margin: 45px auto;
-  width: 91.3%;
+  margin: 70px auto;
+  width: 81.3%;
   display: flex;
-  justify-content: space-evenly;
-}
-
-.contact {
-  width: 410px;
+  justify-content: space-between;
 }
 
 .contact form {
@@ -715,6 +651,41 @@ form textarea {
   background-color: rgb(100, 10, 10);
 }
 
+/* SECTION REDES SOCIAIS*/
+
+/* lembrar de consertar espacamento quando diminui a tela*/
+
+.socials div {
+  display: flex;
+}
+
+.socials h1 {
+  font-size: 24px;
+}
+
+/* Esta em flex porque as imagens estao em tamanho diferente */
+.socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 14px;
+  height: 50px;
+  width: 50px;
+}
+
+.socials a:nth-of-type(1) img {
+  height: 50px;
+  width: 50px;
+}
+.socials a:nth-of-type(2) img {
+  height: 40px;
+  width: 40px;
+}
+.socials a:nth-of-type(3) img {
+  height: 43px;
+  width: 43px;
+}
+
 /* SECTION VIDEOS YOUTUBE */
 
 .videoArea {
@@ -728,12 +699,8 @@ form textarea {
 
 .videoArea div iframe {
   display: inline;
-  width: 370px;
-  height: 240px;
-}
-
-.videoArea div iframe:nth-of-type(2) {
-  margin-left: 11px;
+  width: 393px;
+  height: 263px;
 }
 
 .videoArea a {
@@ -827,27 +794,25 @@ footer {
   display: none;
 }
 
-@media (max-width: 1290px) {
+@media (max-width: 1318px) {
   .videoArea div iframe {
     width: 310px;
     height: 200px;
   }
-  .videoArea div iframe:nth-of-type(2) {
-    margin: 7px 0 0 0;
+
+  form input {
+    height: 40px;
+    width: 350px;
+  }
+  
+  form textarea {
+    height: 78px;
+    width: 350px;
   }
 }
 @media (max-width: 1150px) {
   .textInfo p {
     font-size: 13px;
-  }
-
-  .videoArea div iframe {
-    width: 350px;
-    height: 220px;
-  }
-
-  .videoArea div iframe:nth-of-type(2) {
-    display: none;
   }
 
   /* Footer */
@@ -897,10 +862,11 @@ footer {
 
   /* SECTION SOCIAIS */
   .socials {
+    margin-top: 30px;
     flex-direction: column;
   }
 
-  .socials br {
+  .socials br, .contact br{
     display: none;
   }
 
@@ -924,26 +890,6 @@ footer {
 
   .socials div {
     margin-top: 8px;
-  }
-
-  .imgDiasComemorativos {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .imgDiasComemorativos a {
-    margin-top: 0px;
-    width: fit-content;
-    height: fit-content;
-  }
-
-  .imgDiasComemorativos img {
-    height: 342px;
-    width: 342px;
-  }
-
-  .imgDiasComemorativos a:nth-of-type(4) {
-    display: none;
   }
 
   /* SECTION AREA CONTACT VIDEO */
@@ -1004,11 +950,6 @@ footer {
   .videoArea div iframe {
     width: 322px;
     height: 175px;
-  }
-
-  .videoArea div iframe:nth-of-type(2) {
-    display: inline;
-    margin-left: 0;
   }
 
   .videoArea a {
