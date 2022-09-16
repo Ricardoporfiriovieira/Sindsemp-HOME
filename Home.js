@@ -8,7 +8,6 @@ hamburgerMenu.addEventListener("click", function () {
   this.classList.toggle("is-active");
   hamburgerMenuDropdown.classList.toggle("is-active");
 });
-//==================================================
 
 //==================================================
 //ANNOUNCEMENTS SLIDER
@@ -17,52 +16,22 @@ hamburgerMenu.addEventListener("click", function () {
 let announcementsSlideIndex = 1;
 showAnnouncementSlides(announcementsSlideIndex);
 
-// Next/previous slide navigation (buttons)
-function changeAnnouncementSlide(announcementsStartingSlide) {
-  showAnnouncementSlides(
-    (announcementsSlideIndex += announcementsStartingSlide)
-  );
-}
-
-// Thumbnail image controls
-function currentAnnouncementSlide(announcementsStartingSlide) {
-  showAnnouncementSlides(
-    (announcementsSlideIndex = announcementsStartingSlide)
-  );
-}
-
 function showAnnouncementSlides(announcementsStartingSlide) {
   let i;
   let slides = document.getElementsByClassName("announcements-slides");
-  let navigationDots = document.getElementsByClassName(
-    "announcements-dot-navigation"
-  );
-  //Defaults to first slide if the announcementsSlideIndex is higher than the amount of slides
-  if (announcementsStartingSlide > slides.length) {
-    announcementsSlideIndex = 1;
-  }
-  //Defaults to last slide if the announcementsSlideIndex is lower than the amount of slides
-  if (announcementsStartingSlide < 1) {
-    announcementsSlideIndex = slides.length;
-  }
+
   //Hides all slides
   for (i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
   }
-  //Removes active class from the dot navigation
-  for (i = 0; i < navigationDots.length; i++) {
-    navigationDots[i].className = navigationDots[i].className.replace(
-      " announcements-active",
-      ""
-    );
+  announcementsSlideIndex++;
+  if (announcementsSlideIndex > slides.length) {
+    announcementsSlideIndex = 1;
   }
-  //Shows current slide
   slides[announcementsSlideIndex - 1].style.display = "block";
-  //Activates corresponding dot navigation based on current slide
-  navigationDots[announcementsSlideIndex - 1].className +=
-    " announcements-active";
+  //Time it takes to change slide in milliseconds
+  setTimeout(showAnnouncementSlides, 8000);
 }
-//==================================================
 
 //==================================================
 //NEWS SLIDER
