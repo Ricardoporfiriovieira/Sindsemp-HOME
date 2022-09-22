@@ -6,12 +6,6 @@
   font-family: "Inter", sans-serif;
 }
 
-main {
-  max-width: 1300px;
-  margin: 0 auto;
-  float: none;
-}
-
 nav {
   width: 100%;
   height: 3rem;
@@ -512,8 +506,7 @@ nav {
 
 .infoArea {
   margin: 0 auto;
-  /* 81.3% */
-  width: 90%;
+  width: 81.3%;
   display: flex;
   justify-content: space-between;
 }
@@ -557,7 +550,7 @@ nav {
 
 .areaContactVideo {
   margin: 70px auto;
-  width: 90%;
+  width: 81.3%;
   display: flex;
   justify-content: space-between;
 }
@@ -636,14 +629,10 @@ form textarea {
 }
 
 .socials a:nth-of-type(1) img {
-  height: 50px;
-  width: 50px;
-}
-.socials a:nth-of-type(2) img {
   height: 40px;
   width: 40px;
 }
-.socials a:nth-of-type(3) img {
+.socials a:nth-of-type(2) img {
   height: 43px;
   width: 43px;
 }
@@ -680,6 +669,45 @@ form textarea {
 }
 .videoArea a:hover {
   background-color: darkslategray;
+}
+
+/* WHATSAPP LINK */
+.whatsapp-link {
+  position: fixed;
+  bottom: 16px;
+  right: 24px;
+}
+
+.whatsapp-link img {
+  width: 48px;
+  height: 48px;
+}
+
+.whatsapp-animation {
+  position: fixed;
+  bottom: 23px;
+  right: 26px;
+  width: 43px;
+  height: 43px;
+  border-radius: 100%;
+  background: none;
+  cursor: pointer;
+  animation: whatsapp-animation 2s infinite;
+}
+.whatsapp-animation:hover {
+  animation: none;
+}
+
+@keyframes whatsapp-animation {
+  0% {
+    box-shadow: 0 0 0 0 rgba(20, 211, 90, 0);
+  }
+  50% {
+    box-shadow: 0 0 8px 8px rgba(20, 211, 90, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(20, 211, 90, 0);
+  }
 }
 
 /* FOOTER */
@@ -799,7 +827,7 @@ footer {
   }
 }
 
-@media (max-width: 990px) {
+@media (max-width: 780px) {
   h1 {
     font-size: 1.2rem;
   }
@@ -849,14 +877,10 @@ footer {
   }
 
   .socials a:nth-of-type(1) img {
-    height: 40px;
-    width: 40px;
-  }
-  .socials a:nth-of-type(2) img {
     height: 30px;
     width: 30px;
   }
-  .socials a:nth-of-type(3) img {
+  .socials a:nth-of-type(2) img {
     height: 33px;
     width: 33px;
   }
@@ -930,9 +954,7 @@ footer {
     align-self: center;
     margin: 15px;
   }
-}
 
-@media (max-width: 780px) {
   /* Footer */
 
   .footerTop {
