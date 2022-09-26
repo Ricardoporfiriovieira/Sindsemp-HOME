@@ -1,86 +1,209 @@
-html {
-  height: 100%;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
 }
 
-body {
-  height: 100%;
-  font-family: "Inter", sans-serif;
-  color: #000;
+#login {
+  height: 100vh;
+}
+
+header {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 70%;
 }
 
-header a {
+/* CONTEUDO DO HEADER */
+
+.home {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 30px;
+}
+
+.home a {
   text-decoration: none;
+  color: inherit;
+}
+.home a:hover {
   color: #cc0302;
-  font-size: 0.8rem;
+}
+
+.home img {
+  height: 40px;
+}
+
+.home p {
+  margin-left: 5px;
+  float: right;
+  letter-spacing: 1px;
+  font-size: 14px;
   font-weight: bold;
 }
-header a:hover {
-  text-shadow: 1px 1px 2px #000;
-}
 
-form {
-  width: 40vw;
+.header-logo {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
+}
+
+.header-logo img {
+  height: 125px;
+}
+
+.vertical-line {
+  border: 1px solid #cc0202;
+  height: 115px;
+}
+
+.header-logo p {
+  float: left;
+  color: darkslategray;
+  font-size: 1.06rem;
+}
+
+/* CONTEUDOS DA MAIN */
+
+.contact {
+  height: 430px;
+  width: 550px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #e5e5e5;
+  border-radius: 20px;
+  transition: all 0.5s ease-in-out;
 }
 
 h1 {
-  color: #3a3334;
+  margin-top: 40px;
+  font-size: 35px;
+  letter-spacing: 1px;
+  transition: all 0.5s ease-in-out;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 22px;
+  transition: all 0.5s ease-in-out;
+}
+
+form div:nth-of-type(2) {
+  margin-top: 25px;
+}
+
+form p {
+  font-size: 12px;
   font-weight: bold;
-  transition: all 0.5s ease-in-out;
+  margin: 0 0 5px 10px;
 }
 
-label {
-  color: #3a3334;
-  font-weight: bold;
-  transition: all 0.5s ease-in-out;
+form input {
+  padding-left: 10px;
+  font-size: 17px;
+  height: 45px;
+  width: 390px;
+  border: 1px solid #959595;
+  background-color: #b9b9b9;
+  border-radius: 50px;
+  outline: none;
 }
-
-input {
-  width: 100%;
-  margin-bottom: 1rem;
-  border: 1px solid #9c9c9c;
-  padding: 0.6rem;
-  height: 32px;
-  border-radius: 1rem;
-  background: #b9b9b9;
-  transition: all 0.5s ease-in-out;
-}
-
-input:focus {
+form input:focus {
   outline: 0;
   border: 1px solid #cc0302;
   background: #fff;
-}
-
-.form-container {
-  background-color: #e6e6e6;
-  padding: 60px 60px;
-  border-radius: 1rem;
-  box-shadow: 0px 0px 8px #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.login-btn {
-  background-color: #cc0302;
-  color: #fff;
-  font-weight: bold;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 1rem;
-  margin-top: 1rem;
   transition: all 0.5s ease-in-out;
 }
 
-.login-btn:hover {
-  background: rgb(255, 75, 75);
-  box-shadow: 0px 0px 8px #cc0302;
+.buttonForm {
   cursor: pointer;
+  border: none;
+  text-align: center;
+  line-height: 27px;
+  font-size: 14px;
+  height: 32px;
+  width: 105px;
+  color: white;
+  font-weight: bold;
+  margin-top: 25px;
+  background-color: #cc0202;
+  border-radius: 50px;
+}
+.buttonForm:hover {
+  background-color: rgb(100, 10, 10);
+}
+
+@media screen and (max-height: 700px) {
+  main {
+    height: fit-content;
+  }
+}
+
+@media screen and (max-width: 670px) {
+  /* HEADER */
+
+  header {
+    height: 215px;
+    flex-direction: column-reverse;
+  }
+
+  .home {
+    margin: 20px 60px 0 0;
+    position: relative;
+  }
+
+  .header-logo img {
+    height: 100px;
+  }
+
+  .header-logo p {
+    font-size: 1rem;
+  }
+
+  /* MAIN */
+  main {
+    align-items: baseline;
+  }
+
+  .contact {
+    margin: 0px;
+    width: 92%;
+  }
+}
+@media screen and (max-width: 490px) {
+  form,
+  form div {
+    width: 100%;
+  }
+
+  form div {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form p {
+    margin-left: 40px;
+  }
+
+  form input {
+    align-self: center;
+    width: 90%;
+    height: 40px;
+  }
 }

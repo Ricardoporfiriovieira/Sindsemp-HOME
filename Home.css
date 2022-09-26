@@ -789,6 +789,20 @@ footer {
   display: none;
 }
 
+.login-admin {
+  position: absolute;
+  left: 8px;
+  background-color: #cc0202;
+  color: #ebeaea;
+  border: 1px solid #000;
+  border-radius: 4px;
+  padding: 2px 4px;
+  font-weight: bold;
+}
+.login-admin:hover {
+  background-color: #000;
+}
+
 @media (max-width: 1318px) {
   .videoArea div iframe {
     width: 310px;
